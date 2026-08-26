@@ -12,6 +12,7 @@ API = f'https://api.github.com/users/{USERNAME}/repos?per_page=100&type=owner&so
 headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'profile-language-card'}
 if token := os.getenv('GITHUB_TOKEN'):
     headers['Authorization'] = f'Bearer {token}'
+
 repos = requests.get(API, headers=headers, timeout=30).json()
 if not isinstance(repos, list):
     raise RuntimeError(f'Could not load repositories: {repos}')
@@ -24,31 +25,33 @@ for repo in repos:
     if isinstance(languages, dict):
         totals.update({name: int(size) for name, size in languages.items()})
 
-top = totals.most_common(5)
+top = totals.most_common(6)
 if not top:
     raise RuntimeError('No repository language data found.')
 
-total_bytes = sum(totals.values())
-colors = ['#0969da', '#8250df', '#1f883d', '#bf8700', '#cf222e']
-rows = []
-for i, (language, size) in enumerate(top):
-    y = 62 + i * 20
-    percent = size / total_bytes * 100
-    rows.append(f'''<circle cx="31" cy="{y-4}" r="4" fill="{colors[i]}"/>
-<text x="43" y="{y}" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">{escape(language)}</text>
-<text x="878" y="{y}" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">{percent:.1f}%</text>
-<rect x="170" y="{y-10}" width="680" height="7" rx="3.5" fill="var(--track)"/>
-<rect x="170" y="{y-10}" width="{680 * percent / 100:.1f}" height="7" rx="3.5" fill="{colors[i]}"/>''')
+total = sum(totals.values())
+palette = ['#f1e05a', '#3572A5', '#3178c6', '#663399', '#e34c26', '#00ADD8']
+bar_x, bar_y, bar_width = 34, 70, 572
+segments, legend = [], []
+cursor = bar_x
+for index, (language, size) in enumerate(top):
+    percent = size / total * 100
+    width = bar_width * percent / 100
+    segments.append(f'<rect x="{cursor:.1f}" y="{bar_y}" width="{width:.1f}" height="10" fill="{palette[index]}"/>')
+    col, row = index % 2, index // 2
+    x, y = 34 + col * 285, 114 + row * 29
+    legend.append(f'<circle cx="{x + 6}" cy="{y - 4}" r="5" fill="{palette[index]}"/><text x="{x + 18}" y="{y}" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13">{escape(language)} <tspan fill="var(--muted)">{percent:.2f}%</tspan></text>')
+    cursor += width
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="920" height="178" viewBox="0 0 920 178">
+svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="640" height="210" viewBox="0 0 640 210">
 <style>
-  :root {{ --border: #d0d7de; --title: #1f2328; --body: #24292f; --muted: #656d76; --track: #d8dee4; }}
-  @media (prefers-color-scheme: dark) {{ :root {{ --border: #30363d; --title: #f0f6fc; --body: #c9d1d9; --muted: #8b949e; --track: #21262d; }} }}
+  :root {{ --card: #f6f8fa; --border: #d0d7de; --title: #8250df; --body: #24292f; --muted: #656d76; }}
+  @media (prefers-color-scheme: dark) {{ :root {{ --card: #21262d; --border: #30363d; --title: #f778ba; --body: #e6edf3; --muted: #b1bac4; }} }}
 </style>
-<rect x="10" y="10" width="900" height="158" rx="18" fill="none" stroke="var(--border)"/>
-<text x="28" y="39" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" font-weight="700">MOST USED LANGUAGES</text>
-<text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">public, non-fork repositories · by code volume</text>
-{''.join(rows)}
+<rect x="10" y="10" width="620" height="190" rx="12" fill="var(--card)" stroke="var(--border)"/>
+<text x="34" y="48" fill="var(--title)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="700">Most Used Languages</text>
+<clipPath id="bar"><rect x="{bar_x}" y="{bar_y}" width="{bar_width}" height="10" rx="5"/></clipPath><g clip-path="url(#bar)">{''.join(segments)}</g>
+{''.join(legend)}
 </svg>'''
 OUT.write_text(svg, encoding='utf-8')
 print(f'Wrote {OUT}')
