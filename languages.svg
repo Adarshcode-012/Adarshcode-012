@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="178" viewBox="0 0 920 178">
+<style>
+  :root { --border: #d0d7de; --title: #1f2328; --body: #24292f; --muted: #656d76; --track: #d8dee4; }
+  @media (prefers-color-scheme: dark) { :root { --border: #30363d; --title: #f0f6fc; --body: #c9d1d9; --muted: #8b949e; --track: #21262d; } }
+</style>
+<rect x="10" y="10" width="900" height="158" rx="18" fill="none" stroke="var(--border)"/>
+<text x="28" y="39" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" font-weight="700">MOST USED LANGUAGES</text>
+<text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">public, non-fork repositories · refreshed automatically</text>
+<circle cx="31" cy="58" r="4" fill="#0969da"/><text x="43" y="62" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">C++</text><text x="878" y="62" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">updating</text><rect x="170" y="52" width="680" height="7" rx="3.5" fill="#21262d"/>
+<circle cx="31" cy="78" r="4" fill="#8250df"/><text x="43" y="82" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Python</text><rect x="170" y="72" width="680" height="7" rx="3.5" fill="#21262d"/>
+<circle cx="31" cy="98" r="4" fill="#1f883d"/><text x="43" y="102" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">JavaScript</text><rect x="170" y="92" width="680" height="7" rx="3.5" fill="#21262d"/>
+</svg>

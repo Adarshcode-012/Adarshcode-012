@@ -20,6 +20,8 @@ concurrency:
 jobs:
   leetcode:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,8 +38,11 @@ jobs:
       - name: Render heatmap
         run: python scripts/render_leetcode_heatmap.py
 
+      - name: Render language summary
+        run: python scripts/render_languages.py
+
       - name: Commit refreshed profile art
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: refresh LeetCode activity"
-          file_pattern: "data/leetcode.json leetcode-heatmap.svg"
+          file_pattern: "data/leetcode.json leetcode-heatmap.svg languages.svg"

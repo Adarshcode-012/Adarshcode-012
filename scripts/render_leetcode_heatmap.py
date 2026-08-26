@@ -62,13 +62,18 @@ out = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" view
 <text x="28" y="35" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" font-weight="700">LEETCODE ACTIVITY</text>
 <text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">submission heatmap · last 365 days</text>''']
 
-# Month labels from the first day represented by each column.
-seen_months = set()
+# Month labels from the first day represented by each column. A calendar can
+# start near the end of a month, so consecutive labels (for example Aug/Sep)
+# otherwise overlap. Keep a small, consistent minimum gap between labels.
+last_month = None
+last_label_col = -3
 for c in range(COLS):
     d = start + timedelta(days=c*7)
-    if d.month not in seen_months:
-        seen_months.add(d.month)
-        out.append(f'<text x="{LEFT+c*(CELL+GAP)}" y="84" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">{d.strftime("%b")}</text>')
+    if d.month != last_month:
+        last_month = d.month
+        if c - last_label_col >= 3:
+            last_label_col = c
+            out.append(f'<text x="{LEFT+c*(CELL+GAP)}" y="84" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">{d.strftime("%b")}</text>')
 
 # Heatmap cells. Each column is one week; each row is Sunday..Saturday.
 for c in range(COLS):
