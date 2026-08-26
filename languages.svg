@@ -5,8 +5,26 @@
 </style>
 <rect x="10" y="10" width="900" height="158" rx="18" fill="none" stroke="var(--border)"/>
 <text x="28" y="39" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="16" font-weight="700">MOST USED LANGUAGES</text>
-<text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">public, non-fork repositories · refreshed automatically</text>
-<circle cx="31" cy="58" r="4" fill="#0969da"/><text x="43" y="62" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">C++</text><text x="878" y="62" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">updating</text><rect x="170" y="52" width="680" height="7" rx="3.5" fill="#21262d"/>
-<circle cx="31" cy="78" r="4" fill="#8250df"/><text x="43" y="82" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Python</text><rect x="170" y="72" width="680" height="7" rx="3.5" fill="#21262d"/>
-<circle cx="31" cy="98" r="4" fill="#1f883d"/><text x="43" y="102" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">JavaScript</text><rect x="170" y="92" width="680" height="7" rx="3.5" fill="#21262d"/>
+<text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">public, non-fork repositories · by code volume</text>
+<circle cx="31" cy="58" r="4" fill="#0969da"/>
+<text x="43" y="62" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">JavaScript</text>
+<text x="878" y="62" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">29.6%</text>
+<rect x="170" y="52" width="680" height="7" rx="3.5" fill="var(--track)"/>
+<rect x="170" y="52" width="201.5" height="7" rx="3.5" fill="#0969da"/><circle cx="31" cy="78" r="4" fill="#8250df"/>
+<text x="43" y="82" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Python</text>
+<text x="878" y="82" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">26.6%</text>
+<rect x="170" y="72" width="680" height="7" rx="3.5" fill="var(--track)"/>
+<rect x="170" y="72" width="180.6" height="7" rx="3.5" fill="#8250df"/><circle cx="31" cy="98" r="4" fill="#1f883d"/>
+<text x="43" y="102" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">TypeScript</text>
+<text x="878" y="102" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">21.0%</text>
+<rect x="170" y="92" width="680" height="7" rx="3.5" fill="var(--track)"/>
+<rect x="170" y="92" width="142.7" height="7" rx="3.5" fill="#1f883d"/><circle cx="31" cy="118" r="4" fill="#bf8700"/>
+<text x="43" y="122" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">CSS</text>
+<text x="878" y="122" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">13.4%</text>
+<rect x="170" y="112" width="680" height="7" rx="3.5" fill="var(--track)"/>
+<rect x="170" y="112" width="91.3" height="7" rx="3.5" fill="#bf8700"/><circle cx="31" cy="138" r="4" fill="#cf222e"/>
+<text x="43" y="142" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">HTML</text>
+<text x="878" y="142" text-anchor="end" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">7.2%</text>
+<rect x="170" y="132" width="680" height="7" rx="3.5" fill="var(--track)"/>
+<rect x="170" y="132" width="49.2" height="7" rx="3.5" fill="#cf222e"/>
 </svg>
