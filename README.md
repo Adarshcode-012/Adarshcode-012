@@ -1,18 +1,18 @@
-<div align="center">
-
-<img src="./adarsh-ascii.svg" width="365" alt="ASCII portrait of Adarsh Jaiswal" />
-
-# Adarsh Jaiswal
-
-**Computer Science (AI/ML) student · Full-stack developer · Problem solver**
-
-I build thoughtful web products and explore applied AI, with a focus on clean engineering, practical user experiences, and consistent problem-solving practice.
-
-<a href="https://www.linkedin.com/in/adarsh-jaiswal-2b79432a9"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://leetcode.com/u/Adarsh_jai12/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
-<a href="mailto:adarshjaiswal273001@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-
-</div>
+<table>
+  <tr>
+    <td width="40%" align="center" valign="middle">
+      <img src="./adarsh-ascii.svg" width="340" alt="ASCII portrait of Adarsh Jaiswal" />
+    </td>
+    <td width="60%" valign="middle">
+      <h1>Adarsh Jaiswal</h1>
+      <p><strong>Computer Science (AI/ML) student · Full-stack developer · Problem solver</strong></p>
+      <p>I build thoughtful web products and explore applied AI, with a focus on clean engineering, practical user experiences, and consistent problem-solving practice.</p>
+      <a href="https://www.linkedin.com/in/adarsh-jaiswal-2b79432a9"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+      <a href="https://leetcode.com/u/Adarsh_jai12/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+      <a href="mailto:adarshjaiswal273001@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+    </td>
+  </tr>
+</table>
 
 ## Selected work
 
