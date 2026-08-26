@@ -82,7 +82,9 @@ result = {
     'stats': {
         **stats,
         'submissions': total_submissions,
-        'active_days': calendar.get('totalActiveDays', len(days)),
+        # The API's totalActiveDays is lifetime-based. Show the active-day count
+        # for the same rolling period represented by the SVG instead.
+        'active_days': sum(1 for day in days if day['count'] > 0),
         'streak': calendar.get('streak', 0),
     },
     'days': days,

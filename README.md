@@ -1,71 +1,55 @@
 <div align="center">
 
-<img src="./adarsh-ascii.svg" width="880" alt="Animated ASCII portrait" />
+<img src="./adarsh-ascii.svg" width="365" alt="ASCII portrait of Adarsh Jaiswal" />
 
-<br>
+# Adarsh Jaiswal
 
-<h1><code>Adarshcode-012@github ~ $ whoami</code></h1>
+**Computer Science (AI/ML) student · Full-stack developer · Problem solver**
 
-<p>
-  <strong>Adarsh Jaiswal</strong><br>
-  Computer Science (AI-ML) · Final Year<br>
-  <code>DSA + Full Stack + AI</code>
-</p>
+I build thoughtful web products and explore applied AI, with a focus on clean engineering, practical user experiences, and consistent problem-solving practice.
 
-<img src="./leetcode-heatmap.svg" width="920" alt="LeetCode submission heatmap" />
-
-<br><br>
-
-<img src="./info-card.svg" width="760" alt="Developer information card" />
-
-<br>
-
-<h3><code>Adarshcode-012@github ~ $ ./projects</code></h3>
-
-<table>
-<tr>
-<td valign="top" width="33%">
-
-### PolishCV
-AI-powered resume enhancement platform.
-
-**FastAPI · React · TypeScript · OpenAI API**
-
-<a href="https://github.com/Adarshcode-012/Resume_Enhancer">Repository →</a>
-
-</td>
-<td valign="top" width="33%">
-
-### ActivityHub
-Full-stack activity booking platform.
-
-**Next.js · Node.js · JWT · REST APIs**
-
-<a href="https://github.com/Adarshcode-012/ActivityHub">Repository →</a>
-
-</td>
-<td valign="top" width="33%">
-
-### Voice Shopping Assistant
-Voice-first shopping assistant focused on AI interaction.
-
-<a href="https://github.com/Adarshcode-012/Voice-shopping-assistant">Repository →</a>
-
-</td>
-</tr>
-</table>
-
-<br>
-
-<h3><code>Adarshcode-012@github ~ $ ./connect</code></h3>
-
-<a href="https://www.linkedin.com/in/adarsh-jaiswal-2b79432a9">LinkedIn</a> ·
-<a href="https://leetcode.com/u/Adarsh_jai12/">LeetCode</a> ·
-<a href="mailto:adarshjaiswal273001@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/adarsh-jaiswal-2b79432a9"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://leetcode.com/u/Adarsh_jai12/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" /></a>
+<a href="mailto:adarshjaiswal273001@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
 
 </div>
 
-<!--
-Profile art is generated locally and committed to this repository.
-The LeetCode heatmap is refreshed by GitHub Actions from LeetCode's public GraphQL calendar.
--->
+## Selected work
+
+| Project | What it does | Stack |
+| :-- | :-- | :-- |
+| [PolishCV](https://github.com/Adarshcode-012/Resume_Enhancer) | AI-assisted resume enhancement platform | FastAPI · React · TypeScript · OpenAI API |
+| [ActivityHub](https://github.com/Adarshcode-012/ActivityHub) | Full-stack activity booking platform | Next.js · Node.js · JWT · REST APIs |
+| [Voice Shopping Assistant](https://github.com/Adarshcode-012/Voice-shopping-assistant) | Voice-first shopping experience powered by AI | AI · Voice interfaces |
+
+## Core toolkit
+
+<p>
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+</p>
+
+## Problem solving
+
+<div align="center">
+  <a href="https://leetcode.com/u/Adarsh_jai12/"><img src="./leetcode-heatmap.svg" width="920" alt="LeetCode submission heatmap for the last 365 days" /></a>
+</div>
+
+The heatmap is refreshed automatically each day from my public LeetCode calendar.
+
+## Most used languages
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adarshcode-012&layout=compact&hide_border=true&title_color=0969da&text_color=57606a&bg_color=00000000" alt="Most used languages" />
+</div>
+
+<!-- The heatmap is generated by GitHub Actions using LeetCode's public GraphQL calendar. -->
