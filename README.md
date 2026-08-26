@@ -1,7 +1,7 @@
 <table>
   <tr>
     <td width="40%" align="center" valign="middle">
-      <img src="./adarsh-ascii.svg" width="340" alt="ASCII portrait of Adarsh Jaiswal" />
+      <img src="./assets/profile-portrait.png" width="250" alt="Portrait of Adarsh Jaiswal" />
     </td>
     <td width="60%" valign="middle">
       <h1>Adarsh Jaiswal</h1>
