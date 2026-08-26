@@ -17,12 +17,34 @@ lines = [
 ]
 
 out = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-<rect width="100%" height="100%" rx="18" fill="#f7f8f9" stroke="#d8dde2"/>
-<rect x="1" y="1" width="488" height="48" rx="17" fill="#ffffff"/>
-<circle cx="22" cy="25" r="5" fill="#c8cdd2"/><circle cx="40" cy="25" r="5" fill="#c8cdd2"/><circle cx="58" cy="25" r="5" fill="#c8cdd2"/>
-<text x="82" y="30" fill="#7b8289" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Adarshcode-012@github</text>
-<text x="24" y="88" fill="#1f252b" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="23" font-weight="700">$ whoami</text>
-<line x1="24" y1="104" x2="466" y2="104" stroke="#e0e4e8"/>''']
+<style>
+  :root {{
+    --card-stroke: #d0d7de;
+    --chrome-fill: #ffffff;
+    --chrome-dot: #afb8c1;
+    --title: #1f2328;
+    --label: #656d76;
+    --body: #24292f;
+    --line: #d8dee4;
+  }}
+  @media (prefers-color-scheme: dark) {{
+    :root {{
+      --card-stroke: #30363d;
+      --chrome-fill: #161b22;
+      --chrome-dot: #6e7681;
+      --title: #f0f6fc;
+      --label: #8b949e;
+      --body: #c9d1d9;
+      --line: #30363d;
+    }}
+  }}
+</style>
+<rect x="10" y="10" width="470" height="500" rx="18" fill="none" stroke="var(--card-stroke)"/>
+<rect x="11" y="11" width="468" height="48" rx="17" fill="var(--chrome-fill)"/>
+<circle cx="32" cy="35" r="5" fill="var(--chrome-dot)"/><circle cx="50" cy="35" r="5" fill="var(--chrome-dot)"/><circle cx="68" cy="35" r="5" fill="var(--chrome-dot)"/>
+<text x="92" y="40" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Adarshcode-012@github</text>
+<text x="24" y="98" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="23" font-weight="700">$ whoami</text>
+<line x1="24" y1="114" x2="466" y2="114" stroke="var(--line)"/>''']
 
 for i, (key, value) in enumerate(lines):
     y = 140 + i * 43
@@ -30,8 +52,8 @@ for i, (key, value) in enumerate(lines):
     out.append(f'''<g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="{delay:.2f}s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="{delay:.2f}s" fill="freeze"/>
-  <text x="24" y="{y}" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">{key.upper()}</text>
-  <text x="24" y="{y+19}" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">{value}</text>
+  <text x="24" y="{y}" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">{key.upper()}</text>
+  <text x="24" y="{y+19}" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">{value}</text>
 </g>''')
 
 out.append('</svg>')

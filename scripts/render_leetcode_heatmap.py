@@ -11,7 +11,7 @@ W, H = 920, 275
 CELL, GAP = 12, 5
 LEFT, TOP = 54, 68
 COLS, ROWS = 53, 7
-PALETTE = ['#eef0f2', '#d7eadb', '#a8d5b0', '#62b66d', '#24963f', '#087f2f']
+PALETTE = ['var(--cell0)', 'var(--cell1)', 'var(--cell2)', 'var(--cell3)', 'var(--cell4)', 'var(--cell5)']
 
 payload = json.loads(DATA.read_text(encoding='utf-8'))
 days = {x['date']: x['count'] for x in payload.get('days', [])}
@@ -30,9 +30,37 @@ def level(count):
     return min(5, max(1, math.ceil(ratio * 5)))
 
 out = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
-<rect width="100%" height="100%" rx="18" fill="#f7f8f9" stroke="#d8dde2"/>
-<text x="28" y="35" fill="#1f252b" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" font-weight="700">LEETCODE ACTIVITY</text>
-<text x="28" y="54" fill="#7b8289" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">submission heatmap · last 365 days</text>''']
+<style>
+    :root {{
+        --card-stroke: #d0d7de;
+        --title: #1f2328;
+        --muted: #656d76;
+        --body: #24292f;
+        --cell0: #ebedf0;
+        --cell1: #9be9a8;
+        --cell2: #40c463;
+        --cell3: #30a14e;
+        --cell4: #216e39;
+        --cell5: #0e4429;
+    }}
+    @media (prefers-color-scheme: dark) {{
+        :root {{
+            --card-stroke: #30363d;
+            --title: #f0f6fc;
+            --muted: #8b949e;
+            --body: #c9d1d9;
+            --cell0: #161b22;
+            --cell1: #0e4429;
+            --cell2: #006d32;
+            --cell3: #26a641;
+            --cell4: #39d353;
+            --cell5: #7ee787;
+        }}
+    }}
+</style>
+<rect x="10" y="10" width="900" height="255" rx="18" fill="none" stroke="var(--card-stroke)"/>
+<text x="28" y="35" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" font-weight="700">LEETCODE ACTIVITY</text>
+<text x="28" y="54" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">submission heatmap · last 365 days</text>''']
 
 # Month labels from the first day represented by each column.
 seen_months = set()
@@ -40,7 +68,7 @@ for c in range(COLS):
     d = start + timedelta(days=c*7)
     if d.month not in seen_months:
         seen_months.add(d.month)
-        out.append(f'<text x="{LEFT+c*(CELL+GAP)}" y="84" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">{d.strftime("%b")}</text>')
+        out.append(f'<text x="{LEFT+c*(CELL+GAP)}" y="84" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">{d.strftime("%b")}</text>')
 
 # Heatmap cells. Each column is one week; each row is Sunday..Saturday.
 for c in range(COLS):
@@ -57,16 +85,16 @@ for c in range(COLS):
 </rect>''')
 
 stats = payload.get('stats', {})
-out.append(f'''<text x="28" y="218" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('submissions', 0)}</tspan> submissions</text>
-<text x="190" y="218" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('active_days', 0)}</tspan> active days</text>
-<text x="330" y="218" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('streak', 0)}</tspan> day streak</text>
-<text x="28" y="244" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">Less</text>''')
+out.append(f'''<text x="28" y="218" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('submissions', 0)}</tspan> submissions</text>
+<text x="190" y="218" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('active_days', 0)}</tspan> active days</text>
+<text x="330" y="218" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12"><tspan font-weight="700">{stats.get('streak', 0)}</tspan> day streak</text>
+<text x="28" y="244" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">Less</text>''')
 
 for i, color in enumerate(PALETTE):
     x = 66 + i*18
     out.append(f'<rect x="{x}" y="236" width="12" height="12" rx="3" fill="{color}"/>')
-out.append('''<text x="186" y="244" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">More</text>
-<text x="830" y="244" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">Adarsh_jai12</text>
+out.append('''<text x="186" y="244" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">More</text>
+<text x="830" y="244" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="10">Adarsh_jai12</text>
 </svg>''')
 
 OUT.write_text('\n'.join(out), encoding='utf-8')

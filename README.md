@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="./adarsh-ascii.svg" width="880" alt="Animated ASCII portrait" />
+
+<br>
+
 <h1><code>Adarshcode-012@github ~ $ whoami</code></h1>
 
 <p>
@@ -12,20 +16,7 @@
 
 <br><br>
 
-<table>
-<tr>
-<td valign="top" width="390">
-
-<img src="./adarsh-ascii.svg" width="370" alt="Animated ASCII portrait" />
-
-</td>
-<td valign="top" width="510">
-
-<img src="./info-card.svg" width="490" alt="Developer information card" />
-
-</td>
-</tr>
-</table>
+<img src="./info-card.svg" width="760" alt="Developer information card" />
 
 <br>
 

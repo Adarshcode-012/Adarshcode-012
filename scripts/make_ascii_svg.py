@@ -5,7 +5,7 @@ import math
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'assets' / 'source-prepped.png'
-OUT = ROOT / 'avi-ascii.svg'
+OUT = ROOT / 'adarsh-ascii.svg'
 
 RAMP = " .`:-=+*cs#%@"
 COLS = 58
@@ -37,8 +37,13 @@ for r in range(ROWS):
     rows.append(''.join(chars).rstrip())
 
 parts = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<g fill="#555b61" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="8" xml:space="preserve">''']
+<style>
+  :root {{ --ascii-fg: #58606a; --ascii-cursor: #8f98a3; }}
+  @media (prefers-color-scheme: dark) {{
+    :root {{ --ascii-fg: #d5dbe3; --ascii-cursor: #f0f6fc; }}
+  }}
+</style>
+<g fill="var(--ascii-fg)" font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="8" xml:space="preserve">''']
 
 for r, text in enumerate(rows):
     y = (r + 1) * CELL_H - 2
@@ -50,7 +55,7 @@ for r, text in enumerate(rows):
   <animate attributeName="width" from="0" to="{WIDTH}" dur="{dur}s" begin="{delay:.3f}s" fill="freeze"/>
 </rect></clipPath>
 <text x="0" y="{y:.1f}" clip-path="url(#clip{r})">{escaped}</text>
-<rect x="0" y="{r*CELL_H}" width="2" height="{CELL_H + 2}" fill="#9aa0a6" opacity="0">
+<rect x="0" y="{r*CELL_H}" width="2" height="{CELL_H + 2}" fill="var(--ascii-cursor)" opacity="0">
   <animate attributeName="x" from="0" to="{WIDTH-2}" dur="{dur}s" begin="{delay:.3f}s" fill="freeze"/>
   <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.92;1" dur="{dur}s" begin="{delay:.3f}s" fill="freeze"/>
 </rect>''')

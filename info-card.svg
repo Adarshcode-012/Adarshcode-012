@@ -1,56 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="490" height="520" viewBox="0 0 490 520">
-<rect width="100%" height="100%" rx="18" fill="#f7f8f9" stroke="#d8dde2"/>
-<rect x="1" y="1" width="488" height="48" rx="17" fill="#ffffff"/>
-<circle cx="22" cy="25" r="5" fill="#c8cdd2"/><circle cx="40" cy="25" r="5" fill="#c8cdd2"/><circle cx="58" cy="25" r="5" fill="#c8cdd2"/>
-<text x="82" y="30" fill="#7b8289" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Adarshcode-012@github</text>
-<text x="24" y="88" fill="#1f252b" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="23" font-weight="700">$ whoami</text>
-<line x1="24" y1="104" x2="466" y2="104" stroke="#e0e4e8"/>
+<style>
+  :root {
+    --card-stroke: #d0d7de;
+    --chrome-fill: #ffffff;
+    --chrome-dot: #afb8c1;
+    --title: #1f2328;
+    --label: #656d76;
+    --body: #24292f;
+    --line: #d8dee4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --card-stroke: #30363d;
+      --chrome-fill: #161b22;
+      --chrome-dot: #6e7681;
+      --title: #f0f6fc;
+      --label: #8b949e;
+      --body: #c9d1d9;
+      --line: #30363d;
+    }
+  }
+</style>
+<rect x="10" y="10" width="470" height="500" rx="18" fill="none" stroke="var(--card-stroke)"/>
+<rect x="11" y="11" width="468" height="48" rx="17" fill="var(--chrome-fill)"/>
+<circle cx="32" cy="35" r="5" fill="var(--chrome-dot)"/><circle cx="50" cy="35" r="5" fill="var(--chrome-dot)"/><circle cx="68" cy="35" r="5" fill="var(--chrome-dot)"/>
+<text x="92" y="40" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Adarshcode-012@github</text>
+<text x="24" y="98" fill="var(--title)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="23" font-weight="700">$ whoami</text>
+<line x1="24" y1="114" x2="466" y2="114" stroke="var(--line)"/>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.00s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.00s" fill="freeze"/>
-  <text x="24" y="140" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">ROLE</text>
-  <text x="24" y="159" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Computer Science (AI-ML) — Final Year</text>
+  <text x="24" y="140" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">ROLE</text>
+  <text x="24" y="159" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">Computer Science (AI-ML) — Final Year</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.16s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.16s" fill="freeze"/>
-  <text x="24" y="183" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">FOCUS</text>
-  <text x="24" y="202" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">DSA + Full Stack + AI</text>
+  <text x="24" y="183" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">FOCUS</text>
+  <text x="24" y="202" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">DSA + Full Stack + AI</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.32s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.32s" fill="freeze"/>
-  <text x="24" y="226" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">LANGUAGES</text>
-  <text x="24" y="245" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">C++  ·  Python  ·  JavaScript  ·  SQL</text>
+  <text x="24" y="226" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">LANGUAGES</text>
+  <text x="24" y="245" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">C++  ·  Python  ·  JavaScript  ·  SQL</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.48s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.48s" fill="freeze"/>
-  <text x="24" y="269" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">WEB</text>
-  <text x="24" y="288" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">React  ·  Next.js  ·  Node.js  ·  REST APIs</text>
+  <text x="24" y="269" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">WEB</text>
+  <text x="24" y="288" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">React  ·  Next.js  ·  Node.js  ·  REST APIs</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.64s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.64s" fill="freeze"/>
-  <text x="24" y="312" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">DATA</text>
-  <text x="24" y="331" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">MySQL  ·  PostgreSQL  ·  SQL Server</text>
+  <text x="24" y="312" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">DATA</text>
+  <text x="24" y="331" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">MySQL  ·  PostgreSQL  ·  SQL Server</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.80s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.80s" fill="freeze"/>
-  <text x="24" y="355" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">AI</text>
-  <text x="24" y="374" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">NLP  ·  ML  ·  Deep Learning  ·  GenAI</text>
+  <text x="24" y="355" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">AI</text>
+  <text x="24" y="374" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">NLP  ·  ML  ·  Deep Learning  ·  GenAI</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="0.96s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="0.96s" fill="freeze"/>
-  <text x="24" y="398" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">ORCHESTRATION</text>
-  <text x="24" y="417" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">CrewAI  ·  Tool Calling  ·  LLM Validation</text>
+  <text x="24" y="398" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">ORCHESTRATION</text>
+  <text x="24" y="417" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">CrewAI  ·  Tool Calling  ·  LLM Validation</text>
 </g>
 <g opacity="1" transform="translate(0 0)">
   <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1.12s" fill="freeze"/>
   <animateTransform attributeName="transform" type="translate" from="-10 0" to="0 0" dur="0.35s" begin="1.12s" fill="freeze"/>
-  <text x="24" y="441" fill="#8a9198" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">PROJECTS</text>
-  <text x="24" y="460" fill="#343b42" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">PolishCV  ·  ActivityHub  ·  Voice Shopping</text>
+  <text x="24" y="441" fill="var(--label)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11">PROJECTS</text>
+  <text x="24" y="460" fill="var(--body)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">PolishCV  ·  ActivityHub  ·  Voice Shopping</text>
 </g>
 </svg>
