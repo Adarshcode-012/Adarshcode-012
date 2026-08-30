@@ -5,9 +5,9 @@
 </style>
 <rect x="10" y="10" width="900" height="266" rx="14" fill="var(--card)" stroke="var(--border)"/>
 <text x="36" y="38" fill="var(--muted)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" font-weight="700">LEETCODE ACTIVITY</text>
-<text x="36" y="72" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16"><tspan font-size="25" font-weight="700">211</tspan> submissions in the past year</text>
-<text x="625" y="65" fill="var(--muted)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Total active days: <tspan fill="var(--body)" font-weight="700">62</tspan></text>
-<text x="760" y="65" fill="var(--muted)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Current streak: <tspan fill="var(--body)" font-weight="700">55</tspan></text>
+<text x="36" y="72" fill="var(--body)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16"><tspan font-size="25" font-weight="700">212</tspan> submissions in the past year</text>
+<text x="625" y="65" fill="var(--muted)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Total active days: <tspan fill="var(--body)" font-weight="700">63</tspan></text>
+<text x="760" y="65" fill="var(--muted)" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12">Current streak: <tspan fill="var(--body)" font-weight="700">56</tspan></text>
 <rect x="36" y="102" width="11" height="11" rx="3" fill="var(--cell0)"/>
 <rect x="36" y="118" width="11" height="11" rx="3" fill="var(--cell0)"/>
 <rect x="36" y="134" width="11" height="11" rx="3" fill="var(--cell4)"/>
@@ -372,7 +372,7 @@
 <rect x="852" y="166" width="11" height="11" rx="3" fill="var(--cell4)"/>
 <rect x="852" y="182" width="11" height="11" rx="3" fill="var(--cell2)"/>
 <rect x="852" y="198" width="11" height="11" rx="3" fill="var(--cell2)"/>
-<rect x="868" y="102" width="11" height="11" rx="3" fill="var(--cell0)"/>
+<rect x="868" y="102" width="11" height="11" rx="3" fill="var(--cell2)"/>
 <rect x="868" y="118" width="11" height="11" rx="3" fill="var(--cell0)"/>
 <rect x="868" y="134" width="11" height="11" rx="3" fill="var(--cell0)"/>
 <rect x="868" y="150" width="11" height="11" rx="3" fill="var(--cell0)"/>
