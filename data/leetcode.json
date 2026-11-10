@@ -2,15 +2,15 @@
   "username": "Adarsh_jai12",
   "real_name": "Adarsh Jaiswal",
   "ranking": 926416,
-  "fetched_at": "2026-11-10T14:48:06.458948+00:00",
+  "fetched_at": "2026-11-10T23:15:16.402120+00:00",
   "window_days": 365,
   "stats": {
     "easy": 93,
     "medium": 88,
     "hard": 10,
     "total_solved": 191,
-    "submissions": 364,
-    "active_days": 128,
+    "submissions": 365,
+    "active_days": 129,
     "streak": 110
   },
   "days": [
@@ -524,6 +524,10 @@
     },
     {
       "date": "2026-11-09",
+      "count": 1
+    },
+    {
+      "date": "2026-11-10",
       "count": 1
     }
   ]
